@@ -41,7 +41,49 @@ header {
     align-items:center;
     border:none;
     background:none;
+    cursor:pointer;
+
+    & img {
+      width:1.5rem;
+      height:1.5rem;
+    }
   }
+}
+
+.menu-toggle {
+  position:absolute;
+  width:1px;
+  height:1px;
+  opacity:0;
+}
+
+.open-menu {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0, 0, 0, 0);
+  white-space:nowrap;
+  border:0;
+}
+
+.close-icon {
+  display:none;
+}
+
+.menu-toggle:checked ~ header .menu-icon {
+  display:none;
+}
+
+.menu-toggle:checked ~ header .close-icon {
+  display:block;
+}
+
+.menu-toggle:focus-visible ~ header .hamburger {
+  outline:2px solid var(--White);
+  outline-offset:4px;
 }
 
 .hero {
@@ -107,4 +149,38 @@ header {
       }
     } 
   }
+}
+
+footer{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:left;
+  padding:2rem;
+  color:var(--White);
+}
+
+.menu-panel {
+  display:none;
+  position:absolute;
+  top:4.25rem;
+  right:0;
+  left:0;
+  padding:2rem;
+  color:var(--White);
+  background-color:var(--Blue700);
+  z-index:1;
+
+  & ul {
+    display:flex;
+    flex-direction:column;
+    gap:1.25rem;
+    list-style:none;
+    text-align:center;
+  }
+
+}
+
+.menu-toggle:checked ~ .menu-panel {
+  display:block;
 }

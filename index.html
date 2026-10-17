@@ -8,19 +8,18 @@
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Grid landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
   <!-- Nav -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
   <header>
     <h1>Bridge Collective</h1>
-    <button class="hamburger"><img src="assets/images/icon-menu.svg" alt="" srcset=""></button>
+    <label class="hamburger" for="menu-toggle">
+      <span class="open-menu">Open menu</span>
+      <img class="menu-icon" src="assets/images/icon-menu.svg" alt="">
+      <img class="close-icon" src="assets/images/icon-close.svg" alt="">
+    </label>
   </header>
   <hr>
 
@@ -78,16 +77,14 @@
       </div>
     </li>
   </ul>
-  <hr>
   </section>
-
+<hr>
   <!-- Footer -->
   <footer>
     © 2026 Bridge Collective
     Registered charity 12345678
   </footer>
-  <div class="menu-panel">
-    <h2>Menu</h2>
+  <div class="menu-panel" id="menu-panel">
     <ul>
       <li>About</li>
       <li>Our Work</li>
@@ -95,11 +92,6 @@
       <li>Annual Report</li>
       <li>Donate</li>
     </ul>
-  </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 </html>
