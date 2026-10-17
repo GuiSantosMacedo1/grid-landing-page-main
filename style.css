@@ -1,0 +1,45 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+  background-color:var(--Blue700);
+}
+
+:root{
+  --White: hsl(0, 0%, 100%);
+  --Blue200: hsl(224, 100%, 95%);
+  --Blue400: hsl(220, 100%, 64%);
+  --Blue600: hsl(228, 100%, 60%);
+  --Blue700: hsl(228, 99%, 58%);
+  --Black: hsl(0, 0%, 0%); /* used at 25% opacity for the menu overlay */
+
+  --font-size-p: 17px;
+  --font-size-nav-footer: 14px;
+}
+
+hr {
+  border:0;
+  height:1px;
+  background-color:var(--Blue400);
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 2rem;
+  & nav {
+    font-size:var(--font-size-nav-footer);
+    color:var(--White);
+    font-size:var(--font-size-nav-footer);
+    font-weight:400;
+  }
+  & .hamburger {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:none;
+    background:none;
+  }
+}
