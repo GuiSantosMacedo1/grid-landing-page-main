@@ -184,3 +184,18 @@ footer{
 .menu-toggle:checked ~ .menu-panel {
   display:block;
 }
+
+@media (min-width: 768px) {
+  main{
+    display:flex;
+  }
+  .hero {
+    width: 30rem;
+  }
+  .stats {
+    ul{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
