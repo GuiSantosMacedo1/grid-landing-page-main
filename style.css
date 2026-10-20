@@ -29,7 +29,7 @@ header {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:1rem 2rem;
+  padding:2rem 3rem;
   & h1 {
     font-size:var(--font-size-sm);
     color:var(--White);
@@ -119,6 +119,13 @@ header {
       height: 20rem;
       display: flex;
       flex-direction: column;
+      margin-inline: -2rem;
+      padding-inline: 2rem;
+      border-bottom: 1px solid var(--Blue400);
+    }
+
+    & li:last-child {
+      border-bottom: none;
     }
 
     & .icon {
@@ -137,7 +144,6 @@ header {
     }
 
     & .text{
-      font-size: var(--font-size-sm);
       display: flex;
       flex-direction: column;
       margin-top: auto;
@@ -146,6 +152,7 @@ header {
       }
       span {
         color: var(--gray100);
+        margin-bottom: 2rem;
       }
     } 
   }
@@ -155,9 +162,9 @@ footer{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:left;
   padding:2rem;
   color:var(--White);
+  border-top: 1px solid var(--Blue400);
 }
 
 .menu-panel {
@@ -190,12 +197,29 @@ footer{
     display:flex;
   }
   .hero {
-    width: 30rem;
+    width: 45rem;
+    padding: 3rem;
+    align-self: center;
   }
   .stats {
+    padding:0;
     ul{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    gap:0;
+    grid-template-columns: repeat(2, 1fr);
+    & li{
+      margin-inline: 0;
+      border: 1px solid var(--Blue400);
+      padding: 2rem 1rem;
     }
+    & li:last-child{
+      border: 1px solid var(--Blue400);
+    }
+    }
+  }
+
+  footer{
+    flex-direction:row;
+    justify-content:space-between;
   }
 }
